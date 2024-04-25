@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Development Website</title>
+    <style>
+        /* CSS styles for the website */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            padding: 5px;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Game Development</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Welcome to our Game Development Website!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur turpis id ex aliquam, sed consectetur diam ultrices. Fusce bibendum mauris nec sem facilisis, ut facilisis ante ornare.</p>
+        <p>Integer tincidunt, lorem id interdum fermentum, purus turpis tincidunt nulla, nec laoreet libero diam nec nibh. Praesent malesuada mi sed mi gravida, ac sollicitudin tellus lacinia.</p>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Game Development. All rights reserved.</p>
+    </footer>
+</body>
+</html>
