@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #game {
+            width: 500px;
+            height: 200px;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        #character {
+            width: 20px;
+            height: 50px;
+            background-color: red;
+            position: relative;
+            top: 150px; /* game height - character height (200 - 50) */
+        }
+
+        /* Create a keyframe animation called "jump" */
+        @keyframes jump {
+            0% { top: 150px; }
+            30% { top: 100px; }
+            70% { top: 100px; }
+            100% { top: 150px; }
+        }
+
+        /* Apply the "animate" class to our character */
+        .animate {
+            animation: jump 300ms linear;
+        }
+    </style>
+    <title>Game Development</title>
+</head>
+<body>
+    <div id="game">
+        <div id="character"></div>
+        <div id="block"></div>
+    </div>
+    <script>
+        const character = document.getElementById("character");
+
+        function jump() {
+            character.classList.add("animate");
+            setTimeout(() => {
+                character.classList.remove("animate");
+            }, 300);
+        }
+
+        // Add event listener to trigger jump on mouse click
+        document.addEventListener("click", jump);
+    </script>
+
+    <!-- Footer -->
+    <footer style="height: auto; background-color: #F7C201;">
+        <h1>Made with ❤️ at DigitalOcean</h1>
+    </footer>
+</body>
+</html>
