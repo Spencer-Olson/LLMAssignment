@@ -1,105 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Development Website</title>
-    <style>
-        /* Resetting default margin and padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin-bottom: 10px;
-        }
-
-        nav ul {
-            list-style: none;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .main-content {
-            padding: 50px;
-            text-align: center;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Development Website</title>
+<style>
+    /* CSS Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    nav {
+        background-color: #444;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+        background-color: #555;
+    }
+    section {
+        padding: 20px;
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .games-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    .game-card {
+        background-color: #f4f4f4;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .game-card h3 {
+        margin-top: 0;
+    }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Game Development Studio</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Games</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="main-content">
-        <h2>Welcome to Our Studio</h2>
-        <p>We create amazing games for players of all ages. Explore our collection and enjoy!</p>
-        <img src="game1.jpg" alt="Game 1">
-        <p>Experience the thrill of our latest adventure game!</p>
-    </section>
+<header>
+    <h1>Game Development Company</h1>
+</header>
 
-    <section class="games">
-        <h2>Games</h2>
-        <div class="game-description">
-            <h3>Fictional Pirate Game</h3>
-            <p>Set sail on a swashbuckling adventure in search of buried treasure! Battle rival pirates, navigate treacherous waters, and build your pirate crew in this epic open-world RPG.</p>
-            <p>Features:</p>
-            <ul>
-                <li>Customize your own pirate ship</li>
-                <li>Recruit crew members with unique abilities</li>
-                <li>Explore mysterious islands and hidden coves</li>
-                <li>Engage in thrilling ship-to-ship combat</li>
-                <li>Discover legendary loot and ancient artifacts</li>
-            </ul>
-            <p>Get ready to embark on the ultimate pirate quest!</p>
+<nav>
+    <a href="#">Home</a>
+    <a href="#" class="active">Games</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section>
+    <h2>Welcome to our Game Development Website!</h2>
+    <div class="games-container">
+        <div class="game-card">
+            <h3>Game Title 1</h3>
+            <p>Description of Game 1.</p>
         </div>
-    </section>
+        <div class="game-card">
+            <h3>Game Title 2</h3>
+            <p>Description of Game 2.</p>
+        </div>
+        <div class="game-card">
+            <h3>Game Title 3</h3>
+            <p>Description of Game 3.</p>
+        </div>
+        <!-- Add more game cards here -->
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Game Development Studio. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; 2024 Game Development Company. All rights reserved.</p>
+</footer>
 
-    <script>
-        // Any JavaScript functionality can be added here if needed
-    </script>
+<script>
+    // JavaScript code can be added here if needed
+</script>
+
 </body>
 </html>
