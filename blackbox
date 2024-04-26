@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon's World Game Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+       .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+       .main {
+            padding: 20px;
+        }
+       .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+       .game-container {
+            width: 80%;
+            margin: 40px auto;
+            text-align: center;
+        }
+       .dragon {
+            width: 50px;
+            height: 50px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+       .obstacle {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dragon's World Game Development</h1>
+    </div>
+    <div class="main">
+        <h2>About Us</h2>
+        <p>Welcome to Dragon's World, a game development company that specializes in creating immersive and engaging games for all platforms.</p>
+        <h2>Our Games</h2>
+        <p>Check out our latest games and upcoming releases.</p>
+        <div class="game-container">
+            <div class="dragon" id="dragon"></div>
+            <div class="obstacle" id="obstacle"></div>
+            <p id="score">Score: 0</p>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 Dragon's World Game Development. All rights reserved.
+    </div>
+    <script>
+        let dragon = document.getElementById("dragon");
+        let obstacle = document.getElementById("obstacle");
+        let score = document.getElementById("score");
+        let cross = true;
+        let scoreValue = 0;
+        let obstacleSpeed = 2;
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowUp") {
+                dragon.style.top = `${parseInt(dragon.style.top) - 10}px`;
+            }
+        });
+
+        setInterval(() => {
+            obstacle.style.left = `${parseInt(obstacle.style.left) + obstacleSpeed}px`;
+            if (parseInt(obstacle.style.left) > window.innerWidth) {
+                obstacle.style.left = "0px";
+                obstacleSpeed += 0.5;
+            }
+            if (checkCollision()) {
+                if (cross) {
+                    scoreValue++;
+                    score.textContent = `Score: ${scoreValue}`;
+                    cross = false;
+                }
+            } else {
+                cross = true;
+            }
+        }, 10);
+
+        function checkCollision() {
+            let dragonRect = dragon.getBoundingClientRect();
+            let obstacleRect = obstacle.getBoundingClientRect();
+            if (dragonRect.left < obstacleRect.right &&
+                dragonRect.right > obstacleRect.left &&
+                dragonRect.top < obstacleRect.bottom &&
+                dragonRect.bottom > obstacleRect.top) {
+                return true;
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
