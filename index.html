@@ -110,11 +110,18 @@
         <p>&copy; 2024 Super Dude Games. All rights reserved.</p>
         <form>
             <h2>Contact Us</h2>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
             <input type="submit" value="Send">
         </form>
+        <p>Fill out the form to contact us.</p>
     </footer>
 
     <script>
