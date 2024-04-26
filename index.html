@@ -1,132 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Dude Games</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        header {
-            background-color: #007bff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        .game {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        form {
-            margin-top: 20px;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
+        body { background-color: #93C572; font-family: Arial, sans-serif; }
+        .header { background-color: #337AB7; color: #FFFFFF; padding: 10px; text-align: center; }
+        .nav { padding: 0; margin: 0; text-align: center; margin-bottom: 20px; }
+        .nav a { color: white; margin: 0 20px; text-decoration: none; font-size: 20px; }
+        .content { text-align: center; }
+        .footer { background-color: #333; color: #fff; text-align: center; padding: 10px; margin-top: 20px; }
+        .form-section { margin-top: 20px; text-align: center; }
+        .form-field { margin-bottom: 10px; }
+        input[type="text"], textarea { padding: 5px; width: 200px; }
     </style>
 </head>
-
 <body>
-    <header>
+    <div class="header">
         <h1>Super Dude Games</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <a href="#about">About</a>
-        </nav>
-    </header>
-
-    <main>
-        <div class="game">
-            <img src="game1.jpg" alt="Game 1">
-            <h2>Game 1 Title</h2>
-            <p>Description of Game 1.</p>
-            <p>Price: $XX.XX</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="game">
-            <img src="game2.jpg" alt="Game 2">
-            <h2>Game 2 Title</h2>
-            <p>Description of Game 2.</p>
-            <p>Price: $XX.XX</p>
-            <button>Add to Cart</button>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Super Dude Games. All rights reserved.</p>
+    </div>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Product</a>
+        <a href="#">About</a>
+    </div>
+    <div class="content">
+        <img src="fake_game_image.jpg" alt="Fake Game">
+        <h2>Adventure Quest</h2>
+        <p>Join the adventure in the mystical world, fighting dragons and solving puzzles!</p>
+    </div>
+    <div class="form-section">
+        <h2>Contact Us</h2>
         <form>
-            <h2>Contact Us</h2>
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-            <input type="submit" value="Send">
+            <div class="form-field">
+                <label>Name:</label>
+                <input type="text" name="name">
+            </div>
+            <div class="form-field">
+                <label>Email:</label>
+                <input type="text" name="email">
+            </div>
+            <div class="form-field">
+                <label>Message:</label>
+                <textarea name="message"></textarea>
+            </div>
+            <button type="submit">Submit</button>
         </form>
-        <p>Fill out the form to contact us.</p>
-    </footer>
-
+    </div>
+    <div class="footer">
+        <p>&copy; 2023 Super Dude Games. All Rights Reserved.</p>
+    </div>
     <script>
-        // JavaScript code can go here
+        // Add your JavaScript here if needed
     </script>
 </body>
-
 </html>
