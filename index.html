@@ -1,56 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Super Dude Games</title>
     <style>
         body { background-color: #93C572; font-family: Arial, sans-serif; }
-        .header { background-color: #337AB7; color: #FFFFFF; padding: 10px; text-align: center; }
-        .nav { padding: 0; margin: 0; text-align: center; margin-bottom: 20px; }
-        .nav a { color: white; margin: 0 20px; text-decoration: none; font-size: 20px; }
+        header { background-color: #337AB7; color: #FFFFFF; padding: 10px; text-align: center; }
+        nav { padding: 0; margin: 0; text-align: center; margin-bottom: 20px; }
+        nav a { color: white; margin: 0 20px; text-decoration: none; font-size: 20px; }
         .content { text-align: center; }
-        .footer { background-color: #333; color: #fff; text-align: center; padding: 10px; margin-top: 20px; }
+        footer { background-color: #333; color: #fff; text-align: center; padding: 10px; margin-top: 20px; }
         .form-section { margin-top: 20px; text-align: center; }
         .form-field { margin-bottom: 10px; }
+        label { display: block; margin: 10px 0 5px; }
         input[type="text"], textarea { padding: 5px; width: 200px; }
     </style>
 </head>
 <body>
-    <div class="header">
+    <header>
         <h1>Super Dude Games</h1>
-    </div>
-    <div class="nav">
+    </header>
+    <nav>
         <a href="#">Home</a>
         <a href="#">Product</a>
         <a href="#">About</a>
-    </div>
-    <div class="content">
-        <img src="fake_game_image.jpg" alt="Fake Game">
-        <h2>Adventure Quest</h2>
-        <p>Join the adventure in the mystical world, fighting dragons and solving puzzles!</p>
-    </div>
-    <div class="form-section">
-        <h2>Contact Us</h2>
-        <form>
-            <div class="form-field">
-                <label>Name:</label>
-                <input type="text" name="name">
-            </div>
-            <div class="form-field">
-                <label>Email:</label>
-                <input type="text" name="email">
-            </div>
-            <div class="form-field">
-                <label>Message:</label>
-                <textarea name="message"></textarea>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    <div class="footer">
+    </nav>
+    <main>
+        <div class="content">
+            <img src="fake_game_image.jpg" alt="Fake Game">
+            <h2>Adventure Quest</h2>
+            <p>Join the adventure in the mystical world, fighting dragons and solving puzzles!</p>
+        </div>
+        <div class="form-section">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-field">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-field">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class="form-field">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <footer>
         <p>&copy; 2023 Super Dude Games. All Rights Reserved.</p>
-    </div>
-    <script>
-        // Add your JavaScript here if needed
-    </script>
+    </footer>
 </body>
 </html>
+
